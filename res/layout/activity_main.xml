@@ -1,0 +1,126 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   	android:orientation="vertical"
+    tools:context=".MainActivity" >
+    
+     <RelativeLayout
+         android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/top"
+        android:background="#0000ff"
+        android:padding="10dp"
+        >
+         <Button
+             android:id="@+id/btn_edit"
+             android:layout_height="wrap_content"
+        	android:layout_width="wrap_content"
+        	android:layout_alignParentLeft="true"
+        	android:background="@drawable/button"
+        	android:onClick="as"
+        	android:text="编辑"
+        	android:textColor="#ffffff"
+        	 android:textSize="15sp"
+             ></Button>
+        
+	     <TextView
+             android:id="@+id/tv_title"
+             android:layout_height="wrap_content"
+        	android:layout_width="wrap_content"
+        	android:text="联系人"
+        	android:layout_centerInParent="true"
+             android:textColor="#ffffff"
+        	 android:textSize="15sp"
+        	 
+             />
+	    
+        
+         
+         <Button
+             android:id="@+id/btn_add"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:background="@drawable/button"
+             android:text="+"
+             android:textColor="#ffffff"
+             android:textSize="15sp" >
+</Button>
+         
+     </RelativeLayout>
+    <!-- 这里应该是放置一个fragment，，占位置， -->
+    
+
+   
+    
+   <RadioGroup 
+       android:id="@+id/radiogroup"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:gravity="center_horizontal"
+       android:orientation="horizontal"
+       >
+       <!-- layout_alignParentBottom="true"     注意这种方式的使用。在相对布局中还是很好使的
+       gravity="center_horizontal"  注意 center_horizontal和vertical_horizontal的区别 -->
+       <RadioButton 
+           android:id="@+id/rbtn_dail"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:background="@drawable/radio_pressed"
+           android:button="@null"
+           android:drawableTop="@drawable/bohao"
+           android:gravity="center_horizontal"
+           android:text="拨号"
+           android:textSize="10sp"
+           />
+       <!-- 
+           android:button="@null"   因为radiobutton默认的就是单选按钮，是一个圈圈加上一个点的按钮，设置为null就不显示了。。
+           android:drawableTop="@drawable/ic_launcher"    这个是干什么用的？？让图片显示在文字的上方。
+        -->
+       
+       <RadioButton 
+           android:id="@+id/rbtn_contacts"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:background="@drawable/radio_pressed"
+           android:button="@null"
+           android:drawableTop="@drawable/qunzu"
+           android:gravity="center_horizontal"
+           android:text="联系人"
+            android:textSize="10sp"
+           />
+       
+      <RadioButton 
+          android:id="@+id/rbtn_collection"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:background="@drawable/radio_pressed"
+          android:layout_weight="1"
+          android:button="@null"
+          android:drawableTop="@drawable/shoucang"
+          android:gravity="center_horizontal"
+          android:text="收藏"
+           android:textSize="10sp"
+          
+          />
+
+       <!-- 我的理解：RadioButton实现的图文混排？？android:drawableTop="@drawable/ic_launcher"图片在上上方
+        android:text="传值通讯"  文字默认在下方 -->
+   </RadioGroup>
+   
+     <LinearLayout
+        android:id="@+id/frame"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+     	android:layout_above="@id/radiogroup"
+        android:layout_below="@id/top"
+        ></LinearLayout>
+    <!-- 这里应该是放置一个fragment，，占位置， -->
+
+</RelativeLayout>

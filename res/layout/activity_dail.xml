@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+  
+     <RelativeLayout
+     	android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#dddddd"
+        android:padding="5dp" >
+
+        <ImageButton
+            android:id="@+id/btn_lixiren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/lianxiren" >
+        </ImageButton>
+
+        <Button
+            android:id="@+id/btn_hujiao"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:text="呼叫"
+            android:background="@drawable/button"
+            android:textColor="#ffffff"
+            android:textSize="20sp" 
+            android:gravity="center"/>
+			
+        <ImageButton
+            android:id="@+id/btn_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/del" >
+        </ImageButton>
+    </RelativeLayout>
+ 
+     
+     
+    <LinearLayout
+        android:id="@+id/bohao_key"
+        android:layout_above="@id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        
+        >
+        
+          <LinearLayout 
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              >
+              <ImageButton
+                  android:id="@+id/num_1"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:src="@drawable/dial_num_1_green"
+                  />
+           <ImageButton
+                  android:id="@+id/num_2"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:src="@drawable/dial_num_2_green"
+                  />
+           <ImageButton
+                  android:id="@+id/num_3"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:src="@drawable/dial_num_3_green"
+                  />
+              </LinearLayout>
+               <LinearLayout 
+              
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              >
+              <ImageButton
+                  android:id="@+id/num_4"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:src="@drawable/dial_num_4_green"
+                  />
+           <ImageButton
+                  android:id="@+id/num_5"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:src="@drawable/dial_num_5_green"
+                  />
+           <ImageButton
+                  android:id="@+id/num_6"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:src="@drawable/dial_num_6_green"
+                  />
+              </LinearLayout>
+              
+               <LinearLayout 
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              >
+              <ImageButton
+                  android:id="@+id/num_7"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:src="@drawable/dial_num_7_green"
+                  />
+           <ImageButton
+                  android:id="@+id/num_8"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:src="@drawable/dial_num_8_green"
+                  />
+           
+           <ImageButton
+                  android:id="@+id/num_9"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:src="@drawable/dial_num_9_green"
+                  />
+              </LinearLayout>
+              
+               <LinearLayout 
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              >
+              <ImageButton
+                  android:id="@+id/xing"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:src="@drawable/dial_num_star_green"
+                 
+                  />
+           <ImageButton
+                  android:id="@+id/num_0"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:src="@drawable/dial_num_0_green"
+                  />
+           <ImageButton
+                  android:id="@+id/jing"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:src="@drawable/dial_num_pound_green_pressed"
+                  />
+              </LinearLayout>
+        
+    </LinearLayout>
+    
+     <TextView
+        android:id="@+id/tv_phonenum"
+        android:layout_above="@id/bohao_key"
+         android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:singleLine="true"
+       android:hint="显示号码"
+       android:textSize="20sp"
+        ></TextView>
+     
+     <ListView
+       android:id="@+id/lv_show_dail"
+         android:layout_above="@id/tv_phonenum"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentTop="true"
+       ></ListView>
+
+   
+    
+   
+
+</RelativeLayout>
